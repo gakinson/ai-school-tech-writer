@@ -21,3 +21,30 @@ Embrace your creativity and personalize this project to craft a solution that un
 - **Sensitive Information:** If your implementation involves sensitive information, you are not required to submit a public repository. Instead, a detailed review of your project through a Loom video is acceptable, where you can demonstrate the functionality and discuss the technologies used without exposing confidential data.
 
 ---
+
+## README Update
+### Changes
+File: .github/workflows/update_readme.yaml
+Diff:
+@@ -19,7 +19,7 @@ jobs:
+       - name: Setup Python
+         uses: actions/setup-python@v3
+         with:
+-          python-version: '3.12'
++          python-version: '3.12.3'
+ 
+       # Install Python dependencies
+       - name: Install Dependencies
+@@ -44,7 +44,7 @@ jobs:
+         env:
+           GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
+           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+-          REPO_NAME: ${{ github.repository }}
++          REPO_PATH: ${{ github.repository }}
+           PR_NUMBER: ${{ env.pull_request_number }}
+ 
+       # Additional step to enable debugging, helps in troubleshooting
+
+### Commit Messages
+- Update python issue
+- Update repo name
